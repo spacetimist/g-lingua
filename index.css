@@ -1,0 +1,153 @@
+body {
+    font-family: 'Poppins', sans-serif; 
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0e3ca;
+}
+
+
+header {
+    background: #99856f;
+    color: white;
+    text-align: center;
+    padding: 10px 20px; /* Tambah padding untuk header */
+    display: flex; /* Menggunakan flexbox */
+    align-items: center; /* Rata tengah secara vertikal */
+    position: relative; /* Tambahkan posisi relatif untuk tombol */
+}
+
+.content p {
+    color: black;
+    margin: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Rata tengah secara vertikal */
+    margin-left: 10px; /* Jarak antara tombol dan logo */
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#logo {
+    height: 55px; /* Sesuaikan tinggi logo sesuai kebutuhan */
+    margin-right: 10px; /* Jarak antara gambar dan teks */
+}
+
+#toggle-sidebar {
+    background: #99856f; /* Warna latar belakang tombol */
+    color: white; /* Warna ikon */
+    border: none; /* Menghilangkan border */
+    cursor: pointer; /* Menambahkan kursor pointer */
+    font-size: 20px; /* Ukuran ikon */
+    padding: 5px 10px; /* Padding untuk tombol */
+    border-radius: 5px; /* Membuat sudut tombol bulat */
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    background: #99856f;
+    color: white;
+    width: 200px;
+    padding: 15px;
+    transition: transform 0.3s ease;  /* Animasi untuk buka/tutup */
+    transform: translateX(-100%);    /* Sembunyikan sidebar */
+}
+
+.sidebar.open {
+    transform: translateX(0);          /* Tampilkan sidebar */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    flex: 1;
+    padding: 15px;
+}
+
+.content h2 {
+    margin: 0;
+}
+
+.lesson {
+    margin-bottom: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+    color: #3867a3;
+}
+
+.section-link {
+    max-width: 800px;
+    display: block; /* Atur agar elemen a menjadi block */
+    text-decoration: none; /* Hapus garis bawah */
+    color: inherit; /* Warna teks mengikuti warna induk */
+    pointer-events: auto;
+}
+
+/* Flexbox untuk section */
+.section-flex {
+    display: flex;
+    justify-content: space-between; /* Agar ada jarak antara konten dan gambar */
+    align-items: center; /* Vertikal align tengah */
+    width: 100%;
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+    color: #3867a3;
+}
+
+.section-content {
+    flex: 1; /* Konten mengambil sisa ruang */
+    padding: 20px; /* Jarak antara konten dan gambar */
+}
+
+/* Mengatur gambar agar lebarnya 50% dari section */
+.section-image {
+    /* flex-basis: 50%; Lebar bagian gambar 50% dari section */
+    display: flex;
+    justify-content: center; /* Pusatkan gambar jika ada padding */
+    align-items: center;
+}
+
+.section-image img {
+    height: 150px;
+    width: 100%;
+    border-radius: 10px; /* Opsional: membuat sudut gambar melengkung */
+    object-fit: cover;
+}
+
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background: linear-gradient(#6c838e, #3867a3);
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

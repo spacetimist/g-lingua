@@ -1,0 +1,58 @@
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+.profile-info {
+    margin-top: 20px;
+    display: flex;
+    padding: 30px;
+    padding-top: 0;
+    align-items: flex-start;
+}
+
+.profile-picture {
+    margin-right: 20px;
+}
+
+.profile-picture img {
+    width: 150px;  /* Lebar gambar */
+    height: 150px; /* Tinggi gambar */
+    border-radius: 50%;
+    border: 3px solid #47b19b; /* Border hijau */
+    object-fit: cover; /* Memastikan gambar terisi dengan baik */
+}
+
+main {
+    max-width: 800px;
+    margin: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+main h1 {
+    padding-left: 30px;
+    color: #3867a3;
+}
+
+.profile-desc {
+    margin-left: 30px; /* Jarak antara gambar dan deskripsi */
+}
+
+.profile-desc h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.desc h3 {
+    margin: 5px 0; /* Jarak atas dan bawah pada heading */
+    font-weight: 550; /* Bold untuk heading */
+    color: #3867a3; /* Warna untuk heading */
+}
+
+.desc p {
+    margin: 0; /* Menghilangkan margin pada paragraf */
+    color: #555; /* Warna teks untuk paragraf */
+}

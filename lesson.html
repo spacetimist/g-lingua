@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Unit 1] Lesson 1</title>
+    <link rel="stylesheet" href="lesson.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo G-Lingua" id="logo"> 
+            <span>G-Lingua</span>
+        </div>
+    </header>
+    <div class="banner-header">
+        <h2>Lesson 1 - Arrange the words</h2>
+    <p>Drag the words into the correct order to form a sentence!</p>
+    </div>
+    
+    <main>
+        <section id="question-info">
+            <p id="question-number"></p>
+            <p id="question-text"></p>
+        </section>
+        <section id="quiz-container">
+            <div id="sentence-container">
+                <!-- Drop area for sentence -->
+                <div class="drop-zone" data-order="1"></div>
+                <div class="drop-zone" data-order="2"></div>
+                <div class="drop-zone" data-order="3"></div>
+                <div class="drop-zone" data-order="4"></div>
+            </div>
+            <div id="word-bank">
+                <!-- Words to be dragged -->
+                <div class="word" draggable="true"></div>
+                <div class="word" draggable="true"></div>
+                <div class="word" draggable="true"></div>
+                <div class="word" draggable="true"></div>
+            </div>
+        </section>
+        
+        <button id="check-answer">Check Answer</button>
+        <p id="feedback"></p>
+
+        <!-- Tombol next question -->
+        <button id="next-question" class="hidden">Next Question</button>
+
+        
+        <button id="try-again" class="hidden">Try Again</button>
+        
+        <div id="completion-message" class="hidden">
+            <img src="assets/completion.jpg" alt="Completed" id="completion-image">
+            <p>Congratulations! You've completed the lesson!</p>
+            <!-- Tombol finish quiz -->
+            <button id="finish-quiz" class="hidden">Finish Lesson</button>
+        </div>
+
+    </main>
+    <script src="lesson.js"></script>
+</body>
+</html>

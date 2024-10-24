@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0e3ca;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background: #99856f;
+    color: white;
+    text-align: center;
+    padding: 10px 20px; /* Tambah padding untuk header */
+    display: flex; /* Menggunakan flexbox */
+    align-items: center; /* Rata tengah secara vertikal */
+    position: relative; /* Tambahkan posisi relatif untuk tombol */
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Rata tengah secara vertikal */
+    margin-left: 10px; /* Jarak antara tombol dan logo */
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#logo {
+    height: 55px; /* Sesuaikan tinggi logo sesuai kebutuhan */
+    margin-right: 10px; /* Jarak antara gambar dan teks */
+}
+
+.banner-header {
+    /* background-color: #3c74ac; */
+    color: black;
+}
+
+main {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#question-info {
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+#question-number {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+#question-text {
+    font-size: 16px;
+    margin: 5px;
+    color: #333;
+}
+
+#quiz-container {
+    display: flex;
+    flex-direction: column; /* Ubah flex direction menjadi kolom */
+    gap: 20px; /* Tambahkan jarak antar elemen */
+    align-items: center;
+    justify-content: center;
+}
+
+#word-bank {
+    width: 45%;
+    padding: 20px;
+}
+
+#sentence-container {
+    width: 100%;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+.word {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    background-color: #3c74ac;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.drop-zone {
+    display: inline-block;
+    width: 100px;
+    padding: 10px;
+    margin: 5px;
+    border: 2px dashed #aaa;
+    border-radius: 5px;
+    min-height: 40px;
+}
+
+.drop-zone.drag-over {
+    border-color: #3c74ac;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #47b19b;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #327c6d;
+}
+
+button#try-again {
+    background-color: #bc3e40;
+}
+
+button#try-again:hover {
+    background-color: #a33637;
+}
+
+#feedback {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: inline-block;
+}
+
+#finish-quiz {
+    padding: 10px 20px;
+    margin: 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none; /* Mulai dalam keadaan tidak terlihat */
+}
+
+#finish-quiz.show {
+    display: inline-block;
+}
+
+#completion-message {
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+#completion-message img {
+    width: 400px;
+    height: auto;
+}
+
+#completion-message p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #66584a;
+}
+
+#completion-message.show {
+    opacity: 1;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    font-size: 1rem;
+}

@@ -1,0 +1,68 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0e3ca;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background: #99856f;
+    color: white;
+    text-align: center;
+    padding: 10px 20px; 
+    display: flex; 
+    align-items: center; 
+    position: relative; 
+}
+
+.logo {
+    display: flex;
+    align-items: center; 
+    margin-left: 10px; 
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#logo {
+    height: 55px; /* Sesuaikan tinggi logo sesuai kebutuhan */
+    margin-right: 10px; /* Jarak antara gambar dan teks */
+}
+
+.container {
+    color: #3867a3;
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+hr {
+    border: 1px solid #ccc; /* Warna dan ketebalan garis */
+    margin: 20px 0; /* Jarak atas dan bawah garis */
+}
+
+.container p {
+    text-align: left;
+    color: black;
+    padding-left: 15px;
+}
+
+.video-container {
+    position: relative;
+}
+
+.banner-header {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: black; 
+    font-size: 15px; 
+    text-align: center; 
+}
+
+
+
+
