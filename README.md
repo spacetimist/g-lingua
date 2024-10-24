@@ -4,6 +4,7 @@ Features:
 
 1. Learning Units
 2. User Profile
-3. Interactive Quizzes
+3. Interactive Quiz-Based Lessons
 
 Technologies Used: HTML, CSS, JavaScript
+Website link: https://spacetimist.github.io/g-lingua/
