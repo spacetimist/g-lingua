@@ -20,8 +20,8 @@ const lessons = [
     },
     {
         title: "Lesson 3",
-        description: "Coming soon",
-        link: "index.html"
+        description: "Match the words!",
+        link: "lesson3.html"
     }
 ];
 
@@ -43,14 +43,6 @@ function generateLessons() {
         title.textContent = lesson.title;
         const description = document.createElement('p');
         description.textContent = lesson.description;
-
-        // Cek apakah pelajaran sudah selesai
-        if (sessionStorage.getItem(`lesson${index + 1}Completed`)) {
-            const completedLabel = document.createElement('span');
-            completedLabel.textContent = "Completed";
-            completedLabel.classList.add('completed-label');
-            section.appendChild(completedLabel); // Tambahkan label "Completed"
-        }
 
         // Gabungkan elemen
         section.appendChild(title);

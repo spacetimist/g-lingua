@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Unit 1] Lesson 1</title>
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="stylesheet" href="lesson3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo G-Lingua" id="logo"> 
+            <span>G-Lingua</span>
+        </div>
+    </header>
+
+    <main>
+        <h2>Lesson 3 - Card Matching Game</h2>
+        <p>Match the English words with their Indonesian equivalents!</p>
+        <div id="card-container"></div>
+        <p id="feedback"></p>
+
+        <!-- Pesan completion dengan animasi -->
+        <div id="completion-message" class="hidden">
+            <img src="assets/completion.jpg" alt="Completed" id="completion-image">
+            <p>Congratulations! You've completed the lesson!</p>
+            <button id="finish-quiz" class="hidden">Finish Lesson</button>
+        </div>
+    </main>
+
+    <script src="lesson3.js"></script>
+</body>
+</html>

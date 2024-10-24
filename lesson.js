@@ -12,12 +12,14 @@ const sentenceContainer = document.getElementById('sentence-container');
 // Load the current question index from LocalStorage or default to 0 (first question)
 let currentQuestionIndex = parseInt(localStorage.getItem('currentQuestionIndex')) || 0;
 let draggedWord = null;
+const progressBar = document.getElementById('progress-bar');
 
 // List of questions and correct answers
 const questions = [
     { text: '"Cuacanya indah"', words: ['The', 'weather', 'is', 'lovely'], answer: ['The', 'weather', 'is', 'lovely'] },
     { text: '"Aku suka hari-hari cerah"', words: ['sunny', 'days', 'like', 'I'], answer: ['I', 'like', 'sunny', 'days'] },
-    { text: '"Hari ini hujan"', words: ['is', 'Today', 'rainy'], answer: ['Today', 'is', 'rainy'] }
+    { text: '"Hari ini hujan"', words: ['is', 'Today', 'rainy'], answer: ['Today', 'is', 'rainy'] },
+    { text: '"Di luar sedang panas"', words: ['hot', 'It\'s', 'outside'], answer: ['It\'s', 'hot', 'outside'] }
 ];
 
 // Event listener untuk 'dragstart' pada word bank
@@ -104,6 +106,7 @@ checkButton.addEventListener('click', () => {
             finishButton.classList.add('show');;
             scrollToFinishButton(); 
             checkButton.classList.add('hidden');
+            updateProgressBar();
         } else {
             nextButton.classList.add('show'); // Tampilkan tombol "Next Question" jika belum soal terakhir
         }
@@ -136,6 +139,7 @@ nextButton.addEventListener('click', () => {
     loadQuestion(currentQuestionIndex);
     nextButton.classList.remove('show'); 
     feedback.textContent = ""; // Reset feedback
+    updateProgressBar();
 });
 
 // Function to load question
@@ -186,6 +190,17 @@ finishButton.addEventListener('click', () => {
 function scrollToFinishButton() {
     finishButton.scrollIntoView({ behavior: 'smooth' }); // Gulir dengan efek smooth
 }
+
+function updateProgressBar() {
+    const totalQuestions = questions.length;
+    const progress = (currentQuestionIndex / (totalQuestions)) * 100; // Hitung persentase progress
+    progressBar.style.width = `${progress}%`; // Perbarui lebar progress bar
+}
+
+window.onload = () => {
+    loadQuestion(currentQuestionIndex);
+    updateProgressBar(); // Perbarui progress bar sesuai posisi soal saat ini
+};
 
 // Load the saved question on page load
 loadQuestion(currentQuestionIndex);

@@ -12,7 +12,7 @@ const materials = [
     },
     {
         title: "Material 3",
-        description: "Description if not null",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab exercitationem et adipisci quam perspiciatis perferendis facilis culpa voluptatibus odio sequi ratione consequuntur placeat minus ex possimus quisquam veniam, quod laboriosam.",
         video: "https://www.youtube.com/embed/40PRWD1-HWA?feature=oembed",
     },
 ];

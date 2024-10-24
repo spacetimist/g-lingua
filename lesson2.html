@@ -14,12 +14,17 @@
             <span>G-Lingua</span>
         </div>
     </header>
-    <div class="banner-header">
+
+    <main>
         <h2>Lesson 2 - Listen and Type the Answer</h2>
         <p>Listen to the audio and type what you hear!</p>
-    </div>
-    
-    <main>
+            <!-- Progress bar -->
+        <section id="progress-section">
+            <div id="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+        </section>
+        
         <section id="question-info">
             <p id="question-number">1.</p>
             <p id="question-text">Listen carefully and type the sentence you hear:</p>
@@ -41,8 +46,6 @@
 
         <!-- Tombol next question -->
         <button id="next-question" class="hidden">Next Question</button>
-
-        <!-- Tombol finish quiz -->
         
         <!-- Pesan completion dengan animasi -->
         <div id="completion-message" class="hidden">

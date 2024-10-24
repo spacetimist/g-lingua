@@ -16,8 +16,8 @@ body {
 }
 
 .profile-picture img {
-    width: 150px;  /* Lebar gambar */
-    height: 150px; /* Tinggi gambar */
+    width: 20vh;  /* Lebar gambar */
+    height: 100%; /* Tinggi gambar */
     border-radius: 50%;
     border: 3px solid #47b19b; /* Border hijau */
     object-fit: cover; /* Memastikan gambar terisi dengan baik */

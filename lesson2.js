@@ -6,7 +6,7 @@ const finishButton = document.getElementById('finish-quiz');
 const completionMessage = document.getElementById('completion-message');
 
 // List of correct answers for each question
-const correctAnswers = ["The weather is lovely", "Today is rainy"];
+const correctAnswers = ["The weather is lovely", "Today is rainy", "It's hot outside"];
 
 // Current question number, load from localStorage if available
 let currentQuestion = parseInt(localStorage.getItem('currentQuestion')) || 0;
@@ -34,7 +34,7 @@ checkButton.addEventListener('click', () => {
         } else {
             showCompletionMessage();
             finishButton.classList.remove('hidden');
-            finishButton.classList.add('show');;
+            finishButton.classList.add('show');
             scrollToFinishButton(); 
             checkButton.classList.add('hidden');
         }
@@ -53,16 +53,15 @@ nextQuestionButton.addEventListener('click', () => {
 });
 
 function loadNextQuestion() {
-    // Clear previous feedback and answer
+    // Bersihkan feedback dan jawaban sebelumnya
     feedback.textContent = "";
     userAnswerInput.value = "";
     
-    // Update question and audio source
+    // Perbarui teks soal dan sumber audio
     document.getElementById('question-number').textContent = (currentQuestion + 1) + ".";
     document.getElementById('lesson-audio').src = `assets/audio${currentQuestion + 1}.mp3`;
 
-    // Hide 'Next Question' button
-    nextQuestionButton.classList.add('hidden');
+    // Sembunyikan tombol 'Next Question'
 }
 
 function loadProgress() {
@@ -79,7 +78,6 @@ function loadProgress() {
 
 // Event listener for 'Finish Lesson' button
 finishButton.addEventListener('click', () => {
-    localStorage.setItem('lesson2Completed', true); // Menyimpan status pelajaran 2 telah selesai
     localStorage.removeItem('currentQuestion');
     window.location.href = 'index.html';
 });
@@ -96,3 +94,31 @@ function showCompletionMessage() {
         completionMessage.classList.add('show');
     }, 100);
 }
+
+function updateProgressBar() {
+    const totalQuestions = correctAnswers.length; // Total soal
+    const progress = ((currentQuestion) / totalQuestions) * 100; // Hitung persentase
+    document.getElementById('progress-bar').style.width = progress + '%'; // Set lebar progress bar
+}
+
+window.onload = () => {
+    loadProgress();
+    updateProgressBar(); // Perbarui progress bar saat halaman dimuat
+};
+
+function loadNextQuestion() {
+    // Clear previous feedback and answer
+    feedback.textContent = "";
+    userAnswerInput.value = "";
+    
+    // Update question and audio source
+    document.getElementById('question-number').textContent = (currentQuestion + 1) + ".";
+    document.getElementById('lesson-audio').src = `assets/audio${currentQuestion + 1}.mp3`;
+
+    // Hide 'Next Question' button
+    nextQuestionButton.classList.add('hidden');
+
+    // Update progress bar
+    updateProgressBar(); 
+}
+

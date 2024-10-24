@@ -190,3 +190,29 @@ input[type="text"] {
     margin: 15px 0;
     font-size: 1rem;
 }
+
+#progress-section {
+    display: flex;
+    justify-content: center; /* Tengahkan secara horizontal */
+    align-items: center;     /* (Opsional) Tengahkan secara vertikal jika diperlukan */
+}
+
+
+/* Progress bar container */
+#progress-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+    height: 10px;
+    margin-bottom: 20px;
+}
+
+/* Progress bar indicator */
+#progress-bar {
+    height: 100%;
+    width: 0%; /* Start with 0% progress */
+    background-color: #4caf50; /* Green bar */
+    transition: width 0.5s ease; /* Smooth transition */
+}
