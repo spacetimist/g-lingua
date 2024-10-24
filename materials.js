@@ -45,8 +45,8 @@ function generateMaterials() {
         
         // Gabungkan semua elemen ke dalam container
         container.appendChild(materialTitle);
-        container.appendChild(materialDescription);
         container.appendChild(videoContainer);
+        container.appendChild(materialDescription);
         const line = document.createElement('hr');
             container.appendChild(line);
 

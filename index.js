@@ -28,7 +28,7 @@ const lessons = [
 function generateLessons() {
     const lessonContainer = document.getElementById('lesson-container');
 
-    lessons.forEach(lesson => {
+    lessons.forEach((lesson, index) => {
         // Buat elemen link
         const lessonLink = document.createElement('a');
         lessonLink.classList.add('section-link');
@@ -44,6 +44,14 @@ function generateLessons() {
         const description = document.createElement('p');
         description.textContent = lesson.description;
 
+        // Cek apakah pelajaran sudah selesai
+        if (localStorage.getItem(`lesson${index + 1}Completed`)) {
+            const completedLabel = document.createElement('span');
+            completedLabel.textContent = "Completed";
+            completedLabel.classList.add('completed-label');
+            section.appendChild(completedLabel); // Tambahkan label "Completed"
+        }
+
         // Gabungkan elemen
         section.appendChild(title);
         section.appendChild(description);
@@ -51,6 +59,7 @@ function generateLessons() {
         lessonContainer.appendChild(lessonLink);
     });
 }
+
 
 // Panggil fungsi untuk menghasilkan lesson saat halaman dimuat
 document.addEventListener('DOMContentLoaded', generateLessons);

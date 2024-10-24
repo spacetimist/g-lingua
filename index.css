@@ -151,3 +151,13 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.completed-label {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}

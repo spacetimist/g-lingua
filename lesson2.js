@@ -79,6 +79,7 @@ function loadProgress() {
 
 // Event listener for 'Finish Lesson' button
 finishButton.addEventListener('click', () => {
+    localStorage.setItem('lesson2Completed', true); // Menyimpan status pelajaran 2 telah selesai
     localStorage.removeItem('currentQuestion');
     window.location.href = 'index.html';
 });
