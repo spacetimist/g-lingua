@@ -45,7 +45,7 @@ function generateLessons() {
         description.textContent = lesson.description;
 
         // Cek apakah pelajaran sudah selesai
-        if (localStorage.getItem(`lesson${index + 1}Completed`)) {
+        if (sessionStorage.getItem(`lesson${index + 1}Completed`)) {
             const completedLabel = document.createElement('span');
             completedLabel.textContent = "Completed";
             completedLabel.classList.add('completed-label');
