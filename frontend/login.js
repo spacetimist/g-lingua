@@ -19,7 +19,7 @@ async function handleLogin(event) {
             localStorage.setItem('token', data.token);
 
             // Redirect to a protected page or show login success message
-            window.location.href = 'dashboard.html';
+            window.location.href = 'frontend/dashboard.html';
         } else {
             alert(data.error);
         }
