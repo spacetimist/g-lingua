@@ -26,7 +26,7 @@ async function handleRegist(event) {
             localStorage.setItem('token', data.token);
 
             // Redirect to a protected page or show registration success message
-            window.location.href = 'login.html';
+            window.location.href = 'index.html';
         } else {
             alert(data.error);
         }
