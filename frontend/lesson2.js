@@ -79,7 +79,7 @@ function loadProgress() {
 // Event listener for 'Finish Lesson' button
 finishButton.addEventListener('click', () => {
     localStorage.removeItem('currentQuestion');
-    window.location.href = 'index.html';
+    window.location.href = 'dashboard.html';
 });
 
 function scrollToFinishButton() {

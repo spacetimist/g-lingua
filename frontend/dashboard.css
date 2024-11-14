@@ -151,3 +151,60 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+
+/* LOGIN PAGE */
+/* Center the login card in the middle of the screen */
+.login-container {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* height: 100vh; Full viewport height */
+    padding: 50px 20px;
+}
+
+.login-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    color: #3867a3;
+    max-width: 400px; /* Limit width to avoid stretching */
+    width: 100%; /* Make it responsive */
+    margin: 0 auto;
+}
+
+.login-card h1 {
+    color: black;
+}
+
+/* Style for form elements */
+#login-form, #register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds space between form elements */
+}
+
+#login-form label, #register-form label {
+    font-weight: 700;
+}
+
+#login-form input, #register-form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#login-form button, #register-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3867a3;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#login-form button:hover, #register-form button:hover {
+    background-color: #2e5484;
+}

@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Display completion message
     finishButton.addEventListener('click', () => {
         localStorage.removeItem('currentQuestion');
-        window.location.href = 'index.html';
+        window.location.href = 'dashboard.html';
     });
     
     function scrollToFinishButton() {

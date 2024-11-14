@@ -1,4 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    // // Check if JWT token exists in local storage
+    // const token = localStorage.getItem('token');
+    
+    // if (!token) {
+    //     // Redirect to login page if no token is found
+    //     console.log(token);
+    //     window.location.href = 'login.html';
+    // } else {
+    //     // Optional: Verify token with backend if necessary
+    //     // Example of sending the token to the backend for verification
+    //     fetch('http://localhost:5000/auth/verify', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Authorization': `Bearer ${token}`,
+    //             'Content-Type': 'application/json'
+    //         }
+    //     })
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         if (!data.success) {
+    //             // Redirect to login if token verification fails
+    //             localStorage.removeItem('token'); // Clear invalid token
+    //             window.location.href = 'login.html';
+    //         }
+    //     })
+    //     .catch(error => {
+    //         console.error('Error verifying token:', error);
+    //         window.location.href = 'login.html';
+    //     });
+    // }
+
     const toggleButton = document.getElementById('toggle-sidebar');
     const sidebar = document.getElementById('sidebar');
 

@@ -183,7 +183,7 @@ function showCompletionMessage() {
 finishButton.addEventListener('click', () => {
     // Clear the progress in LocalStorage upon finishing
     localStorage.removeItem('currentQuestionIndex');
-    window.location.href = 'index.html';
+    window.location.href = 'dashboard.html';
 });
 
 // Function to scroll to the completion message
