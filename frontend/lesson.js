@@ -9,6 +9,41 @@ const wordBank = document.getElementById('word-bank');
 const questionNumber = document.getElementById('question-number');
 const sentenceContainer = document.getElementById('sentence-container');
 
+document.addEventListener('DOMContentLoaded', () => {
+
+    // Check if JWT token exists in local storage
+    const token = localStorage.getItem('token');
+    const userId = localStorage.getItem('userId');
+    
+    if (!token) {
+        // Redirect to login page if no token is found
+        window.location.href = 'login.html';
+    } else {
+        // Optional: Verify token with backend if necessary
+        // Example of sending the token to the backend for verification
+        fetch('http://localhost:5000/auth/verify', {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (!data.success) {
+                // Redirect to login if token verification fails
+                localStorage.removeItem('token'); // Clear invalid token
+                window.location.href = 'login.html';
+            }
+        })
+        .catch(error => {
+            console.error('Error verifying token:', error);
+            window.location.href = 'login.html';
+        });
+    }
+});
+
+
 // Load the current question index from LocalStorage or default to 0 (first question)
 let currentQuestionIndex = parseInt(localStorage.getItem('currentQuestionIndex')) || 0;
 let draggedWord = null;
@@ -180,11 +215,23 @@ function showCompletionMessage() {
 }
 
 // Event listener untuk 'Finish Lesson' button
-finishButton.addEventListener('click', () => {
-    // Clear the progress in LocalStorage upon finishing
-    localStorage.removeItem('currentQuestionIndex');
-    window.location.href = 'dashboard.html';
+finishButton.addEventListener('click', async () => {
+    const userId = localStorage.getItem('userId'); // Assuming `userId` is stored
+    // const email = localStorage.getItem('email');
+    try {
+        await fetch('http://localhost:5000/auth/updateProgress', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ userId })
+        });
+        localStorage.removeItem('currentQuestionIndex'); // Clear progress
+        window.location.href = 'dashboard.html';
+    } catch (error) {
+        console.error("Error updating progress:", error);
+    }
 });
+
+
 
 // Function to scroll to the completion message
 function scrollToFinishButton() {

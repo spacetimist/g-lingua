@@ -17,9 +17,10 @@ async function handleLogin(event) {
         if (response.ok) {
             // Save the JWT token in local storage
             localStorage.setItem('token', data.token);
+            localStorage.setItem('userId', data.user.userId);
 
             // Redirect to a protected page or show login success message
-            window.location.href = 'frontend/dashboard.html';
+            window.location.href = 'dashboard.html';
         } else {
             alert(data.error);
         }

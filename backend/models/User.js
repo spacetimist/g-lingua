@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const userSchema = new mongoose.Schema({
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
-    progress: { type: Object, default: {} }, // Store user progress if needed
+    name: { type: String, required: false},
+    completedLessons: { type: Number, default: 0}
 });
 
 module.exports = mongoose.model('User', userSchema);
