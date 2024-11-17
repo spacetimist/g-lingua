@@ -59,7 +59,7 @@ G-Lingua is a web-based interactive learning application that allows users to st
    PORT=5000
 4. Start the backend server:
    ```bash
-   node server.js
+   node api/index.js
 
 ### 3. **Frontend Setup**
 Open the vercel link
