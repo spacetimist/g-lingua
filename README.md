@@ -63,3 +63,6 @@ G-Lingua is a web-based interactive learning application that allows users to st
 
 ### 3. **Frontend Setup**
 Open the vercel link
+
+### 4. **Mobile APK**
+Download here to use the mobile version of G-Lingua! https://github.com/spacetimist/glingua-mobile.git 
